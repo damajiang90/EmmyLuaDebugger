@@ -138,6 +138,7 @@ int EmmyFacade::OnDisconnect() {
 	isIDEReady = false;
 	isWaitingForIDE = false;
 	Debugger::Get()->Stop();
+	Debugger::Get()->RemoveAllBreakpoints();
 	return 0;
 }
 
